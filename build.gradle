@@ -1,0 +1,60 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.2.0-beta1'
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+ext {
+    compileSdkVersion = 24
+    buildToolsVersion = "24.0.1"
+
+    //Libraries
+    daggerVersion = '2.5'
+    rxJavaVersion = '1.1.9'
+    rxAndroidVersion = '1.2.1'
+    javaxAnnotationVersion = "1.0"
+    androidannotationsVersion = '3.3.2'
+    supportAppCompatVersion = '24.1.1'
+    supportVersion = '24.1.1'
+    supportDesignVersion = '24.1.1'
+    gsonVersion = '2.7'
+
+    //Unit testing
+    jUnitVersion = "4.12"
+
+    dependencies = [
+            daggerCompiler            : "com.google.dagger:dagger-compiler:${daggerVersion}",
+            dagger                    : "com.google.dagger:dagger:${daggerVersion}",
+            rxJava                    : "io.reactivex:rxjava:${rxJavaVersion}",
+            rxAndroid                 : "io.reactivex:rxandroid:${rxAndroidVersion}",
+            javaxAnnotation           : "javax.annotation:jsr250-api:${javaxAnnotationVersion}",
+            supportAppCompat          : "com.android.support:appcompat-v7:${supportAppCompatVersion}",
+            support                   : "com.android.support:support-v4:${supportVersion}",
+            design                    : "com.android.support:design:${supportDesignVersion}",
+            androidannotations        : "org.androidannotations:androidannotations-api:${androidannotationsVersion}",
+            androidannotationsCompiler: "org.androidannotations:androidannotations:${androidannotationsVersion}",
+            gson                      : "com.google.code.gson:gson:${gsonVersion}"
+    ]
+
+    testDependencies = [
+            junit      : "junit:junit:${jUnitVersion}",
+    ]
+}

@@ -3,20 +3,20 @@ A sample application that transforms Hipchat's chat message string to JSON forma
 
 ## @Mentions
 **Input:** "@chris you around? "
-> Return (string):
+- Return (string):
 ```
 { "mentions": [ "chris" ] }
 ```
 
 ## Emoticons
 **Input:** "Good morning! (megusta) (coffee)"
-> Return (string):
+- Return (string):
 ```
 { "emoticons": [ "megusta", "coffee" ] }
 ```
 ## Links
 **Input:** "Olympics are starting soon; http://www.nbcolympics.com"
-> Return (string):
+- Return (string):
 ```
 {
 "links": [
@@ -27,7 +27,7 @@ A sample application that transforms Hipchat's chat message string to JSON forma
 
 ## All
 **Input:** "@bob @john (success) such a cool feature; https://twitter.com/jdorfman/status/430511497475670016"
-> Return (string):
+- Return (string):
 ```
 {
 "mentions": [

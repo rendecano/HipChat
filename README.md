@@ -1,6 +1,8 @@
 # HipChat
 A sample application that transforms Hipchat's chat message string to JSON format.
 
+![Alt text](/screens/screenshot.png?raw=true "Screenshot")
+
 ## @Mentions
 **Input:** "@chris you around? "
 - Return (string):
